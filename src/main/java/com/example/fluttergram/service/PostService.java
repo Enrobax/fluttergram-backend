@@ -17,5 +17,15 @@ public class PostService {
         return postRepository.findAll();
     }
 
+    public List<Post> findPostByUser_id(Long id){
+        return postRepository.findPostByUser_id(id);
+    }
 
+    public Post addPost(Post post){
+        return postRepository.save(post);
+    }
+
+    public void deletePost(Long id){
+        postRepository.deletePostById(id);
+    }
 }
